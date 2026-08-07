@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fullscreen Fixed 10-Photo Collage Background -->
+  <div class="collage-background">
+    <div class="photo-card card-1"><img src="photo1.jpg" alt="Photo 1"></div>
+    <div class="photo-card card-2"><img src="photo2.jpg" alt="Photo 2"></div>
+    <div class="photo-card card-3"><img src="photo3.jpg" alt="Photo 3"></div>
+    <div class="photo-card card-4"><img src="photo4.jpg" alt="Photo 4"></div>
+    <div class="photo-card card-5"><img src="photo5.jpg" alt="Photo 5"></div>
+    <div class="photo-card card-6"><img src="photo6.jpg" alt="Photo 6"></div>
+    <div class="photo-card card-7"><img src="photo7.jpg" alt="Photo 7"></div>
+    <div class="photo-card card-8"><img src="photo8.jpg" alt="Photo 8"></div>
+    <div class="photo-card card-9"><img src="photo9.jpg" alt="Photo 9"></div>
+    <div class="photo-card card-10"><img src="photo10.jpg" alt="Photo 10"></div>
+  </div>
+
+  <!-- Main Age Calculator Glassmorphism Card -->
+  <div class="calculator-card">
+    <h2>🎂 Age Calculator</h2>
+    <p class="subtitle">✨ Find out your age in seconds! ✨</p>
+
+    <div class="input-group">
+      <span class="icon">👤</span>
+      <input type="text" id="userName" placeholder="Enter your name">
+    </div>
+
+    <div class="input-group">
+      <span class="icon">📅</span>
+      <input type="number" id="birthYear" placeholder="Enter your birth year">
+    </div>
+
+    <button onclick="calculateAge()">🧮 Calculate Age</button>
+
+    <div id="result" class="result-message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

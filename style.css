@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #c3a6ff, #f9b6e8);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fullscreen 10-Photo Collage Grid Layout */
+.collage-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.photo-card {
+  background: rgba(255, 255, 255, 0.3);
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* Permanent Image Styling (No Upload / Fully Static) */
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dynamic aesthetic rotations for 10 cards collage look */
+.card-1 { transform: rotate(-4deg); }
+.card-2 { transform: rotate(3deg); }
+.card-3 { transform: rotate(-2deg); }
+.card-4 { transform: rotate(4deg); }
+.card-5 { transform: rotate(-3deg); }
+.card-6 { transform: rotate(2deg); }
+.card-7 { transform: rotate(-4deg); }
+.card-8 { transform: rotate(3deg); }
+.card-9 { transform: rotate(-2deg); }
+.card-10 { transform: rotate(4deg); }
+
+/* Glassmorphism Age Calculator Form */
+.calculator-card {
+  position: relative;
+  z-index: 2;
+  width: 360px;
+  padding: 32px 28px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 28px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.calculator-card h2 {
+  font-size: 1.6rem;
+  color: #2b2b2b;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 22px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 12px 18px;
+  margin-bottom: 16px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.input-group .icon {
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff758c, #a287f4);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(162, 135, 244, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(162, 135, 244, 0.5);
+}
+
+.result-message {
+  margin-top: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Responsive Grid Adjustments for Mobile / Smaller Screens */
+@media (max-width: 900px) {
+  .collage-background {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    padding: 12px;
+  }
+}
